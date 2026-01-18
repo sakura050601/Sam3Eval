@@ -4,7 +4,7 @@ sam3/
 # ---- do NOT commit datasets / archives ----
 egohands/
 datasets/
-data/
+# data/
 *.zip
 *.tar
 *.tar.gz
