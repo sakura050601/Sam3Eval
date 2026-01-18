@@ -1,0 +1,24 @@
+# ---- do NOT commit upstream SAM3 repo ----
+sam3/
+
+# ---- do NOT commit datasets / archives ----
+egohands/
+datasets/
+data/
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# ---- outputs / caches ----
+*_out/
+gt_vis_out/
+sam3_egohands_eval_out/
+runs/
+logs/
+wandb/
+__pycache__/
+*.pyc
+.DS_Store
+.eggs/
+*.egg-info/
