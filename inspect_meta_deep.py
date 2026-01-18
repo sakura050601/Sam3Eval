@@ -13,7 +13,6 @@ lf = getattr(v0, "labelled_frames", None)
 print("labelled_frames type:", type(lf))
 
 
-# labelled_frames 可能是 list/ndarray/struct
 def describe(x, name):
     if x is None:
         print(name, "is None")

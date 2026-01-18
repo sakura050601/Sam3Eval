@@ -8,8 +8,7 @@ from PIL import Image, ImageDraw
 from sam3.model_builder import build_sam3_image_model
 from sam3.model.sam3_image_processor import Sam3Processor
 
-# 你这份数据的帧名明显是 frame_####.jpg（从你运行结果看出来）
-# 但我仍保留几种兜底规则
+
 CANDIDATES = [
     "{video}/frame_{frame}.jpg",
     "{video}/frame_{frame}.png",

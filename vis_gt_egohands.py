@@ -5,7 +5,6 @@ import numpy as np
 import scipy.io as sio
 from PIL import Image, ImageDraw
 
-# 常见帧命名尝试（找不到再加规则）
 CANDIDATES = [
     "{video}/{frame}.jpg",
     "{video}/{frame}.png",
@@ -44,7 +43,6 @@ def find_frame_image(root: Path, video_id: str, frame_num: int) -> Path | None:
         p = base / rel
         if p.exists():
             return p
-    # 兜底：在 video 子目录里搜包含 frame_num 的文件（可能慢，但只用于小抽查）
     vdir = base / video_id
     if vdir.exists():
         for p in vdir.glob("*"):
@@ -111,7 +109,7 @@ def main():
             "yourright": getattr(fr, "yourright"),
         }
 
-        # 生成 union GT mask（你也可以分别保存四张）
+        # 生成 union GT mask
         union = np.zeros((H, W), dtype=bool)
         for name, poly in polys.items():
             if isinstance(poly, np.ndarray) and poly.size > 0:
