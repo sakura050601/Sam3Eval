@@ -1,0 +1,5 @@
+num_samples: 5
+mean_iou: 0.4151855428391865
+mean_precision: 0.4151855428391865
+mean_recall: 0.9999999999999598
+median_iou: 0.45785940704828537
