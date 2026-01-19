@@ -5,7 +5,7 @@ import pandas as pd
 from tqdm import tqdm
 import matplotlib.pyplot as plt
 
-from predictor_stub import NoModelPredictor  # 先用占位跑通
+from predictor_stub import Sam3Predictor  # 先用占位跑通
 
 # 以后你接SAM3就改成：from predictor_stub import Sam3Predictor
 
@@ -75,7 +75,7 @@ def main():
     if not img_paths:
         raise RuntimeError("images_dir 里没找到图片")
 
-    predictor = NoModelPredictor(mode=args.baseline_mode)
+    predictor = Sam3Predictor()
     rows = []
     viz_saved = 0
 
